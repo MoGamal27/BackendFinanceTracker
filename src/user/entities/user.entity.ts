@@ -3,14 +3,14 @@ import { UserProfile } from './user-profile.entity';
 
 @Entity('users')
 export class User {
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn()
   id: string;
 
   @Column({ unique: true })
   email: string;
 
   @Column()
-  password_hash: string;
+  password: string;
 
   @Column()
   full_name: string;
